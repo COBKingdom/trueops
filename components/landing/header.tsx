@@ -1,6 +1,9 @@
 "use client"
 
+<<<<<<< HEAD
 import Link from "next/link"
+=======
+>>>>>>> b5fa6c0087805a2b47066f02ab23638e9dddc03b
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
 import { useState } from "react"
@@ -11,8 +14,11 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
+<<<<<<< HEAD
         
         {/* Logo */}
+=======
+>>>>>>> b5fa6c0087805a2b47066f02ab23638e9dddc03b
         <div className="flex items-center gap-2">
           <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary">
             <span className="text-sm font-bold text-primary-foreground">T</span>
@@ -20,7 +26,10 @@ export function Header() {
           <span className="text-xl font-semibold text-foreground">TrueOps</span>
         </div>
 
+<<<<<<< HEAD
         {/* Desktop Nav */}
+=======
+>>>>>>> b5fa6c0087805a2b47066f02ab23638e9dddc03b
         <nav className="hidden items-center gap-8 md:flex">
           <a href="#problem" className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground">
             Problem
@@ -33,6 +42,7 @@ export function Header() {
           </a>
         </nav>
 
+<<<<<<< HEAD
         {/* Desktop CTA */}
         <div className="hidden md:block">
           <Link href="https://aqua.trueops.app">
@@ -41,6 +51,14 @@ export function Header() {
         </div>
 
         {/* Mobile Menu Toggle */}
+=======
+        <div className="hidden md:block">
+<button onClick={() => window.location.href = "https://aqua.trueops.app"}>
+  Start with AquaOps
+</button>
+        </div>
+
+>>>>>>> b5fa6c0087805a2b47066f02ab23638e9dddc03b
         <button
           className="md:hidden"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -54,7 +72,10 @@ export function Header() {
         </button>
       </div>
 
+<<<<<<< HEAD
       {/* Mobile Menu */}
+=======
+>>>>>>> b5fa6c0087805a2b47066f02ab23638e9dddc03b
       {mobileMenuOpen && (
         <div className="border-t border-border/40 bg-background md:hidden">
           <nav className="flex flex-col gap-4 px-4 py-6">
@@ -79,6 +100,7 @@ export function Header() {
             >
               Products
             </a>
+<<<<<<< HEAD
 
             {/* Mobile CTA */}
             <Link href="https://aqua.trueops.app">
@@ -89,9 +111,24 @@ export function Header() {
                 Start with AquaOps
               </Button>
             </Link>
+=======
+          <Button
+  className="mt-2 w-full"
+  onClick={() => {
+    setMobileMenuOpen(false)
+    window.location.href = "https://aqua.trueops.app"
+  }}
+>
+  Start with AquaOps
+</Button>
+>>>>>>> b5fa6c0087805a2b47066f02ab23638e9dddc03b
           </nav>
         </div>
       )}
     </header>
   )
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> b5fa6c0087805a2b47066f02ab23638e9dddc03b
