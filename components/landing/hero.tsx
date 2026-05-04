@@ -13,17 +13,37 @@ export function Hero() {
         <h1 className="text-balance text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl">
           Stop guessing your business numbers
         </h1>
+
         <p className="mx-auto mt-6 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground sm:text-xl">
           Track your real profit, expenses and customer debt — all in one place.
         </p>
+
         <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-          <Button size="lg" className="w-full gap-2 sm:w-auto">
+          
+          {/* Primary CTA */}
+          <Button
+            size="lg"
+            className="w-full gap-2 sm:w-auto"
+            onClick={() => {
+              window.location.href = "https://aqua.trueops.app/onboarding"
+            }}
+          >
             Start with AquaOps
             <ArrowRight className="h-4 w-4" />
           </Button>
-          <Button size="lg" variant="outline" className="w-full sm:w-auto">
+
+          {/* Secondary CTA (for now also directs to onboarding) */}
+          <Button
+            size="lg"
+            variant="outline"
+            className="w-full sm:w-auto"
+            onClick={() => {
+              window.location.href = "https://aqua.trueops.app/onboarding"
+            }}
+          >
             See how it works
           </Button>
+
         </div>
       </div>
     </section>
