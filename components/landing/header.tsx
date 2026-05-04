@@ -35,46 +35,64 @@ export function Header() {
 
         {/* Desktop CTA */}
         <div className="hidden md:block">
-          <Link href="https://aqua.trueops.app/onboarding">
-            <Button>Start with AquaOps</Button>
-          </Link>
+          <Button
+            onClick={() => {
+              window.location.href = "https://aqua.trueops.app/onboarding"
+            }}
+          >
+            Start with AquaOps
+          </Button>
         </div>
 
         {/* Mobile Toggle */}
         <button
           className="md:hidden"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          aria-label="Toggle menu"
         >
           {mobileMenuOpen ? (
-            <X className="h-6 w-6" />
+            <X className="h-6 w-6 text-foreground" />
           ) : (
-            <Menu className="h-6 w-6" />
+            <Menu className="h-6 w-6 text-foreground" />
           )}
         </button>
       </div>
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="border-t bg-background md:hidden">
+        <div className="border-t border-border/40 bg-background md:hidden">
           <nav className="flex flex-col gap-4 px-4 py-6">
-            <a href="#problem" onClick={() => setMobileMenuOpen(false)}>
+            <a
+              href="#problem"
+              className="text-sm font-medium text-muted-foreground hover:text-foreground"
+              onClick={() => setMobileMenuOpen(false)}
+            >
               Problem
             </a>
-            <a href="#solution" onClick={() => setMobileMenuOpen(false)}>
+            <a
+              href="#solution"
+              className="text-sm font-medium text-muted-foreground hover:text-foreground"
+              onClick={() => setMobileMenuOpen(false)}
+            >
               Solution
             </a>
-            <a href="#products" onClick={() => setMobileMenuOpen(false)}>
+            <a
+              href="#products"
+              className="text-sm font-medium text-muted-foreground hover:text-foreground"
+              onClick={() => setMobileMenuOpen(false)}
+            >
               Products
             </a>
 
-            <Link href="https://aqua.trueops.app/onboarding">
-              <Button
-                className="mt-2 w-full"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Start with AquaOps
-              </Button>
-            </Link>
+            <Button
+              className="mt-2 w-full"
+              onClick={() => {
+                setMobileMenuOpen(false)
+                window.location.href = "https://aqua.trueops.app/onboarding"
+              }}
+            >
+              Start with AquaOps
+            </Button>
           </nav>
         </div>
       )}
