@@ -69,39 +69,42 @@ export function Footer() {
         {/* FOOTER GRID */}
         <div className="mt-16 grid gap-10 md:grid-cols-4">
 
-          {/* BRAND */}
-          <div className="md:col-span-2">
+{/* BRAND */}
+<div className="md:col-span-2">
 
-            <div className="flex items-center gap-3">
+  <div className="flex items-center gap-5">
 
-<img
-  src="/logo.png"
-  alt="TrueOps Logo"
-  className="h-20 w-auto object-contain sm:h-24"
-/>
+    <div className="rounded-2xl bg-white px-4 py-3 shadow-xl">
 
-              <div>
-                <h3 className="text-xl font-bold">
-                  TrueOps
-                </h3>
+      <img
+        src="/logo.png"
+        alt="TrueOps Logo"
+        className="h-20 w-auto object-contain sm:h-24"
+      />
 
-                <p className="text-sm text-blue-200">
-                  Operations Software Ecosystem
-                </p>
-              </div>
+    </div>
 
-            </div>
+    <div>
+      <h3 className="text-2xl font-bold text-white">
+        TrueOps
+      </h3>
 
-            <p className="mt-5 max-w-md leading-relaxed text-blue-100">
+      <p className="text-sm text-blue-200">
+        Operations Software Ecosystem
+      </p>
+    </div>
 
-              TrueOps builds industry-focused operational software
-              products that help businesses manage production,
-              sales, expenses, reporting and operational performance.
+  </div>
 
-            </p>
+  <p className="mt-6 max-w-md leading-relaxed text-blue-100">
 
-          </div>
+    TrueOps builds industry-focused operational software
+    products that help businesses manage production,
+    sales, expenses, reporting and operational performance.
 
+  </p>
+
+</div>
           {/* PRODUCTS */}
           <div>
 
