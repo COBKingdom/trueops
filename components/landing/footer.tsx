@@ -75,7 +75,7 @@ export function Footer() {
             <div className="flex items-center gap-3">
 
               <img
-                src="/trueops-logo.png"
+                src="/logo.png"
                 alt="TrueOps Logo"
                 className="h-10 w-10 object-contain"
               />
