@@ -74,11 +74,11 @@ export function Footer() {
 
             <div className="flex items-center gap-3">
 
-              <img
-                src="/logo.png"
-                alt="TrueOps Logo"
-                className="h-10 w-10 object-contain"
-              />
+<img
+  src="/logo.png"
+  alt="TrueOps Logo"
+  className="h-20 w-auto object-contain sm:h-24"
+/>
 
               <div>
                 <h3 className="text-xl font-bold">
