@@ -17,25 +17,25 @@ export function Header() {
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
 
         {/* LOGO */}
-        <div className="flex items-center gap-3">
+<div className="flex items-center gap-3">
 
-          <img
-            src="/trueops-logo.png"
-            alt="TrueOps Logo"
-            className="h-9 w-9 object-contain"
-          />
+  <img
+    src="/trueops-logo.png"
+    alt="TrueOps Logo"
+    className="h-10 w-10 object-contain"
+  />
 
-          <div className="flex flex-col leading-none">
-            <span className="text-lg font-bold text-white">
-              TrueOps
-            </span>
+  <div>
+    <span className="text-xl font-semibold text-foreground">
+      TrueOps
+    </span>
 
-            <span className="text-[10px] uppercase tracking-wider text-blue-200">
-              Operations Software
-            </span>
-          </div>
-        </div>
+    <p className="text-xs text-muted-foreground">
+      Operations Platform
+    </p>
+  </div>
 
+</div>
         {/* DESKTOP NAV */}
         <nav className="hidden items-center gap-8 md:flex">
 
