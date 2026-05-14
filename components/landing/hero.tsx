@@ -11,7 +11,7 @@ import {
 
 export function Hero() {
   const goToAqua = () => {
-    window.location.href = "https://aqua.trueops.app/auth"
+    window.location.href = "https://aqua.trueops.app/aquaops"
   }
 
   const scrollToProducts = () => {

@@ -10,7 +10,7 @@ import {
 
 export function Footer() {
   const goToAqua = () => {
-    window.location.href = "https://aqua.trueops.app/auth"
+    window.location.href = "https://aqua.trueops.app/aquaops"
   }
 
   return (
