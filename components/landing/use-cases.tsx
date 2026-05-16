@@ -53,55 +53,120 @@ export function UseCases() {
         <div className="mt-14 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
 
           {/* AQUAOPS */}
-          <Card
-            onClick={goToAqua}
-            className="group cursor-pointer overflow-hidden rounded-3xl border-0 bg-[#071533] text-white shadow-xl transition duration-300 hover:-translate-y-1 hover:shadow-2xl"
-          >
+{/* AQUAOPS */}
+<Card
+  onClick={goToAqua}
+  className="group relative cursor-pointer overflow-hidden rounded-3xl border-0 bg-[#071533] text-white shadow-2xl transition duration-300 hover:-translate-y-1 hover:shadow-[0_20px_60px_rgba(37,99,235,0.25)]"
+>
 
-            <CardContent className="p-7">
+  {/* GLOW */}
+  <div className="absolute right-0 top-0 h-40 w-40 rounded-full bg-blue-500/20 blur-3xl" />
 
-              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-500/20">
+  <CardContent className="relative p-7">
 
-                <Droplets className="h-7 w-7 text-blue-300" />
+    {/* TOP */}
+    <div className="flex items-start justify-between">
 
-              </div>
+      <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-500/20">
 
-              <div className="mt-6">
+        <Droplets className="h-7 w-7 text-blue-300" />
 
-                <h3 className="text-2xl font-bold">
-                  AquaOps
-                </h3>
+      </div>
 
-                <p className="mt-3 text-sm leading-relaxed text-blue-100">
+      <div className="flex items-center gap-2 rounded-full bg-green-500/10 px-3 py-1">
 
-                  Water factory management software for tracking
-                  production, sales, expenses, debts, cash flow,
-                  reports and operational performance in real time.
+        <div className="h-2 w-2 rounded-full bg-green-400 animate-pulse" />
 
-                </p>
+        <span className="text-[11px] font-semibold text-green-300">
+          LIVE OPERATIONS
+        </span>
 
-              </div>
+      </div>
 
-              {/* FEATURES */}
-              <div className="mt-6 space-y-2 text-sm text-blue-100">
+    </div>
 
-                <p>• Live cloud synchronization</p>
-                <p>• Multi-device access</p>
-                <p>• Universal currency support</p>
-                <p>• Professional reporting</p>
+    {/* TITLE */}
+    <div className="mt-6">
 
-              </div>
+      <h3 className="text-3xl font-bold tracking-tight">
+        AquaOps
+      </h3>
 
-              {/* CTA */}
-              <div className="mt-8 flex items-center gap-2 font-medium text-blue-300 transition group-hover:translate-x-1">
+      <p className="mt-3 text-sm leading-relaxed text-blue-100">
 
-                Launch AquaOps
-                <ArrowRight className="h-4 w-4" />
+        Operational intelligence software for water factories —
+        helping businesses manage production, sales, expenses,
+        debts, reporting and profitability from one platform.
 
-              </div>
+      </p>
 
-            </CardContent>
-          </Card>
+    </div>
+
+    {/* LIVE METRICS */}
+    <div className="mt-7 grid grid-cols-2 gap-3">
+
+      <div className="rounded-2xl bg-white/5 p-4 backdrop-blur">
+        <p className="text-xs text-blue-200">
+          Revenue Today
+        </p>
+
+        <p className="mt-1 text-xl font-bold">
+          $524K
+        </p>
+      </div>
+
+      <div className="rounded-2xl bg-white/5 p-4 backdrop-blur">
+        <p className="text-xs text-blue-200">
+          Production
+        </p>
+
+        <p className="mt-1 text-xl font-bold">
+          700 Bags
+        </p>
+      </div>
+
+      <div className="rounded-2xl bg-white/5 p-4 backdrop-blur">
+        <p className="text-xs text-blue-200">
+          Net Cash Profit
+        </p>
+
+        <p className="mt-1 text-xl font-bold text-green-300">
+          $239K
+        </p>
+      </div>
+
+      <div className="rounded-2xl bg-white/5 p-4 backdrop-blur">
+        <p className="text-xs text-blue-200">
+          Outstanding Debt
+        </p>
+
+        <p className="mt-1 text-xl font-bold text-orange-300">
+          $205K
+        </p>
+      </div>
+
+    </div>
+
+    {/* FEATURES */}
+    <div className="mt-7 space-y-2 text-sm text-blue-100">
+
+      <p>• Cloud synchronized operations</p>
+      <p>• Multi-device operational access</p>
+      <p>• Real-time business reporting</p>
+      <p>• Financial intelligence dashboard</p>
+
+    </div>
+
+    {/* CTA */}
+    <div className="mt-8 flex items-center gap-2 font-semibold text-blue-300 transition group-hover:translate-x-1">
+
+      Launch AquaOps
+      <ArrowRight className="h-4 w-4" />
+
+    </div>
+
+  </CardContent>
+</Card>
 
           {/* RETAILOPS */}
           <Card className="rounded-3xl border-0 bg-white shadow-md">
