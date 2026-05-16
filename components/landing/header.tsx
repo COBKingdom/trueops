@@ -12,33 +12,44 @@ export function Header() {
   }
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-gray-200 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/90">
+    <header className="sticky top-0 z-50 w-full border-b border-gray-200/70 bg-white/90 backdrop-blur-xl supports-[backdrop-filter]:bg-white/80">
 
-      <div className="mx-auto flex h-24 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto flex h-[78px] max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
 
-        {/* LOGO */}
-        <div className="flex items-center gap-4">
+        {/* LEFT */}
+        <div className="flex items-center gap-3">
 
           <img
             src="/logo.png"
             alt="TrueOps Logo"
-            className="h-16 w-auto object-contain sm:h-20"
+            className="h-11 w-auto object-contain sm:h-14"
           />
 
-          <div className="hidden sm:block">
-            <h1 className="text-xl font-bold text-[#071533]">
+          <div className="flex flex-col leading-tight">
+
+            <h1 className="text-[17px] font-bold tracking-tight text-[#071533] sm:text-[20px]">
               TrueOps
             </h1>
 
-            <p className="text-xs text-gray-500">
-              Operations Platform
-            </p>
+            <div className="flex items-center gap-2">
+              <p className="text-[11px] text-gray-500 sm:text-xs">
+                Operational Platform
+              </p>
+
+              <div className="hidden sm:flex items-center gap-1 rounded-full bg-green-50 px-2 py-[2px]">
+                <div className="h-2 w-2 rounded-full bg-green-500 animate-pulse" />
+                <span className="text-[10px] font-medium text-green-700">
+                  LIVE
+                </span>
+              </div>
+            </div>
+
           </div>
 
         </div>
 
         {/* DESKTOP NAV */}
-        <nav className="hidden items-center gap-10 md:flex">
+        <nav className="hidden items-center gap-8 md:flex">
 
           <a
             href="#problem"
@@ -63,46 +74,61 @@ export function Header() {
 
         </nav>
 
-        {/* CTA */}
-        <div className="hidden items-center gap-3 md:flex">
+        {/* DESKTOP CTA */}
+        <div className="hidden md:flex items-center">
 
           <Button
-            variant="outline"
-            className="border-[#2563eb] text-[#2563eb] hover:bg-blue-50"
+            className="h-11 rounded-xl bg-[#2563eb] px-5 text-sm font-semibold shadow-sm transition hover:bg-blue-700"
             onClick={goToAqua}
           >
-            Login
-          </Button>
-
-          <Button
-            className="bg-[#2563eb] hover:bg-blue-700"
-            onClick={goToAqua}
-          >
-            Start Free
+            Launch AquaOps
           </Button>
 
         </div>
 
-        {/* MOBILE BUTTON */}
-        <button
-          className="md:hidden"
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          aria-label="Toggle menu"
-        >
-          {mobileMenuOpen ? (
-            <X className="h-6 w-6 text-[#071533]" />
-          ) : (
-            <Menu className="h-6 w-6 text-[#071533]" />
-          )}
-        </button>
+        {/* MOBILE RIGHT */}
+        <div className="flex items-center gap-3 md:hidden">
+
+          <Button
+            size="sm"
+            className="h-9 rounded-lg bg-[#2563eb] px-3 text-xs font-semibold shadow-sm hover:bg-blue-700"
+            onClick={goToAqua}
+          >
+            Launch
+          </Button>
+
+          <button
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Toggle menu"
+            className="rounded-lg border border-gray-200 p-2"
+          >
+            {mobileMenuOpen ? (
+              <X className="h-5 w-5 text-[#071533]" />
+            ) : (
+              <Menu className="h-5 w-5 text-[#071533]" />
+            )}
+          </button>
+
+        </div>
 
       </div>
 
       {/* MOBILE MENU */}
       {mobileMenuOpen && (
-        <div className="border-t border-gray-200 bg-white md:hidden">
+        <div className="border-t border-gray-100 bg-white/95 backdrop-blur md:hidden">
 
-          <nav className="flex flex-col gap-4 px-6 py-6">
+          <nav className="flex flex-col gap-5 px-5 py-6">
+
+            {/* STATUS */}
+            <div className="flex items-center gap-2 rounded-xl bg-green-50 px-3 py-2">
+
+              <div className="h-2 w-2 rounded-full bg-green-500 animate-pulse" />
+
+              <p className="text-xs font-medium text-green-700">
+                LIVE Operational Platform
+              </p>
+
+            </div>
 
             <a
               href="#problem"
@@ -129,7 +155,7 @@ export function Header() {
             </a>
 
             <Button
-              className="mt-3 bg-[#2563eb] hover:bg-blue-700"
+              className="mt-2 h-11 rounded-xl bg-[#2563eb] text-sm font-semibold hover:bg-blue-700"
               onClick={() => {
                 setMobileMenuOpen(false)
                 goToAqua()
