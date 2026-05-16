@@ -102,60 +102,110 @@ export function UseCases() {
 
     </div>
 
-    {/* LIVE METRICS */}
-    <div className="mt-7 grid grid-cols-2 gap-3">
+{/* LIVE DASHBOARD PREVIEW */}
+<div className="relative mt-8">
 
-      <div className="rounded-2xl bg-white/5 p-4 backdrop-blur">
-        <p className="text-xs text-blue-200">
-          Revenue Today
-        </p>
+  {/* GLOW */}
+  <div className="absolute inset-0 rounded-[28px] bg-blue-500/10 blur-2xl" />
 
-        <p className="mt-1 text-xl font-bold">
-          $524K
-        </p>
-      </div>
+  {/* MAIN IMAGE */}
+  <div className="relative overflow-hidden rounded-[28px] border border-white/10 bg-[#091a3d] shadow-2xl">
 
-      <div className="rounded-2xl bg-white/5 p-4 backdrop-blur">
-        <p className="text-xs text-blue-200">
-          Production
-        </p>
+    <img
+      src="/aqua-dashboard-mobile.png"
+      alt="AquaOps Dashboard"
+      className="w-full object-cover"
+    />
 
-        <p className="mt-1 text-xl font-bold">
-          700 Bags
-        </p>
-      </div>
+    {/* FLOATING STATUS */}
+    <div className="absolute left-4 top-4 rounded-full bg-green-500/90 px-3 py-1 text-[11px] font-semibold text-white shadow-lg">
 
-      <div className="rounded-2xl bg-white/5 p-4 backdrop-blur">
-        <p className="text-xs text-blue-200">
-          Net Cash Profit
-        </p>
-
-        <p className="mt-1 text-xl font-bold text-green-300">
-          $239K
-        </p>
-      </div>
-
-      <div className="rounded-2xl bg-white/5 p-4 backdrop-blur">
-        <p className="text-xs text-blue-200">
-          Outstanding Debt
-        </p>
-
-        <p className="mt-1 text-xl font-bold text-orange-300">
-          $205K
-        </p>
-      </div>
+      ● LIVE OPERATIONS
 
     </div>
 
-    {/* FEATURES */}
-    <div className="mt-7 space-y-2 text-sm text-blue-100">
+    {/* FLOATING METRIC */}
+    <div className="absolute bottom-4 right-4 rounded-2xl border border-white/10 bg-black/50 px-4 py-3 backdrop-blur-xl">
 
-      <p>• Cloud synchronized operations</p>
-      <p>• Multi-device operational access</p>
-      <p>• Real-time business reporting</p>
-      <p>• Financial intelligence dashboard</p>
+      <p className="text-[11px] text-gray-300">
+        Net Cash Profit
+      </p>
+
+      <p className="text-lg font-bold text-green-300">
+        $439K
+      </p>
 
     </div>
+
+  </div>
+
+  {/* FLOATING REPORT CARD */}
+  <div className="absolute -bottom-10 -left-2 hidden w-40 overflow-hidden rounded-2xl border border-white/10 bg-[#0d1b3e] shadow-2xl sm:block">
+
+    <img
+      src="/aqua-reports-mobile.png"
+      alt="AquaOps Reports"
+      className="w-full object-cover"
+    />
+
+  </div>
+
+</div>
+
+{/* LIVE METRICS */}
+<div className="mt-16 grid grid-cols-2 gap-3">
+
+  <div className="rounded-2xl bg-white/5 p-4 backdrop-blur">
+    <p className="text-xs text-blue-200">
+      Revenue
+    </p>
+
+    <p className="mt-1 text-xl font-bold">
+      $952K
+    </p>
+  </div>
+
+  <div className="rounded-2xl bg-white/5 p-4 backdrop-blur">
+    <p className="text-xs text-blue-200">
+      Production
+    </p>
+
+    <p className="mt-1 text-xl font-bold">
+      5746 Bags
+    </p>
+  </div>
+
+  <div className="rounded-2xl bg-white/5 p-4 backdrop-blur">
+    <p className="text-xs text-blue-200">
+      Net Cash Profit
+    </p>
+
+    <p className="mt-1 text-xl font-bold text-green-300">
+      $439K
+    </p>
+  </div>
+
+  <div className="rounded-2xl bg-white/5 p-4 backdrop-blur">
+    <p className="text-xs text-blue-200">
+      Outstanding Debt
+    </p>
+
+    <p className="mt-1 text-xl font-bold text-orange-300">
+      $2.7K
+    </p>
+  </div>
+
+</div>
+
+{/* FEATURES */}
+<div className="mt-7 space-y-2 text-sm text-blue-100">
+
+  <p>• Cloud synchronized operations</p>
+  <p>• Multi-device operational access</p>
+  <p>• Financial intelligence reporting</p>
+  <p>• Real-time production visibility</p>
+
+</div>
 
     {/* CTA */}
     <div className="mt-8 flex items-center gap-2 font-semibold text-blue-300 transition group-hover:translate-x-1">
