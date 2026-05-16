@@ -27,7 +27,7 @@ export function Hero() {
   return (
     <section className="relative overflow-hidden bg-[#071533] px-4 py-20 sm:px-6 sm:py-28 lg:px-8 lg:py-32">
 
-      {/* BACKGROUND EFFECTS */}
+      {/* BACKGROUND */}
       <div className="absolute inset-0 -z-10 overflow-hidden">
 
         <div className="absolute right-0 top-0 h-[450px] w-[450px] translate-x-1/3 -translate-y-1/3 rounded-full bg-blue-500/20 blur-3xl" />
@@ -44,7 +44,7 @@ export function Hero() {
           <div className="inline-flex items-center gap-2 rounded-full border border-blue-400/20 bg-blue-500/10 px-4 py-1 text-sm text-blue-200">
 
             <Layers3 className="h-4 w-4" />
-            Operations Software Ecosystem
+            Operational Intelligence Platform
 
           </div>
 
@@ -63,7 +63,7 @@ export function Hero() {
 
           </p>
 
-          {/* FEATURE LIST */}
+          {/* FEATURES */}
           <div className="mt-10 grid gap-4 sm:grid-cols-2">
 
             <div className="flex items-start gap-3 rounded-2xl bg-white/5 p-4 backdrop-blur">
@@ -124,7 +124,7 @@ export function Hero() {
                 </p>
 
                 <p className="mt-1 text-sm text-blue-100">
-                  Specialized software products for different industries.
+                  Specialized operational software for different industries.
                 </p>
               </div>
 
@@ -160,69 +160,118 @@ export function Hero() {
         {/* RIGHT SIDE */}
         <div className="relative">
 
-          {/* MAIN CARD */}
-          <div className="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-2xl backdrop-blur">
+          {/* GLOW */}
+          <div className="absolute inset-0 rounded-[40px] bg-blue-500/10 blur-3xl" />
 
-            <div className="flex items-center justify-between border-b border-white/10 pb-4">
+          {/* MAIN CARD */}
+          <div className="relative overflow-hidden rounded-[32px] border border-white/10 bg-white/5 p-5 shadow-2xl backdrop-blur-xl">
+
+            {/* HEADER */}
+            <div className="flex items-center justify-between">
 
               <div>
+
                 <p className="text-sm text-blue-200">
-                  Featured Product
+                  Operational Platform
                 </p>
 
-                <h3 className="text-2xl font-bold text-white">
+                <h3 className="mt-1 text-3xl font-bold text-white">
                   AquaOps
                 </h3>
+
               </div>
 
-              <div className="rounded-full bg-green-500/20 px-3 py-1 text-xs font-medium text-green-300">
-                Live
+              <div className="flex items-center gap-2 rounded-full bg-green-500/10 px-3 py-1">
+
+                <div className="h-2 w-2 rounded-full bg-green-400 animate-pulse" />
+
+                <span className="text-xs font-semibold text-green-300">
+                  LIVE
+                </span>
+
               </div>
 
             </div>
 
-            {/* SCREENSHOT */}
-            <div className="mt-6 overflow-hidden rounded-2xl">
+            {/* DASHBOARD */}
+            <div className="relative mt-6 overflow-hidden rounded-[28px] border border-white/10 bg-[#091a3d]">
 
               <img
-                src="/dashboard-preview.png"
+                src="/aqua-dashboard-mobile.png"
                 alt="AquaOps Dashboard"
-                className="w-full rounded-2xl"
+                className="w-full object-cover"
+              />
+
+              {/* FLOATING METRIC */}
+              <div className="absolute bottom-4 left-4 rounded-2xl border border-white/10 bg-black/40 px-4 py-3 backdrop-blur-xl">
+
+                <p className="text-[11px] text-gray-300">
+                  Net Cash Profit
+                </p>
+
+                <p className="text-xl font-bold text-green-300">
+                  $439K
+                </p>
+
+              </div>
+
+              {/* LIVE BADGE */}
+              <div className="absolute right-4 top-4 rounded-full bg-green-500/90 px-3 py-1 text-[11px] font-semibold text-white shadow-lg">
+
+                ● LIVE OPERATIONS
+
+              </div>
+
+            </div>
+
+            {/* FLOATING REPORT CARD */}
+            <div className="absolute -bottom-10 -right-6 hidden w-44 overflow-hidden rounded-3xl border border-white/10 bg-[#0d1b3e] shadow-2xl xl:block">
+
+              <img
+                src="/aqua-reports-mobile.png"
+                alt="AquaOps Reports"
+                className="w-full object-cover"
               />
 
             </div>
 
-            {/* STATS */}
-            <div className="mt-6 grid grid-cols-3 gap-4">
+            {/* METRICS */}
+            <div className="mt-8 grid grid-cols-3 gap-3">
 
               <div className="rounded-2xl bg-[#0d1b3e] p-4 text-center">
+
                 <p className="text-xs text-blue-200">
-                  Sync
+                  Revenue
                 </p>
 
                 <p className="mt-1 text-lg font-bold text-white">
-                  Live
+                  $952K
                 </p>
+
               </div>
 
               <div className="rounded-2xl bg-[#0d1b3e] p-4 text-center">
+
+                <p className="text-xs text-blue-200">
+                  Production
+                </p>
+
+                <p className="mt-1 text-lg font-bold text-white">
+                  5746 Bags
+                </p>
+
+              </div>
+
+              <div className="rounded-2xl bg-[#0d1b3e] p-4 text-center">
+
                 <p className="text-xs text-blue-200">
                   Access
                 </p>
 
                 <p className="mt-1 text-lg font-bold text-white">
-                  Multi-Device
-                </p>
-              </div>
-
-              <div className="rounded-2xl bg-[#0d1b3e] p-4 text-center">
-                <p className="text-xs text-blue-200">
-                  Currency
-                </p>
-
-                <p className="mt-1 text-lg font-bold text-white">
                   Global
                 </p>
+
               </div>
 
             </div>
@@ -232,6 +281,7 @@ export function Hero() {
         </div>
 
       </div>
+
     </section>
   )
 }
