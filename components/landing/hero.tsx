@@ -25,7 +25,7 @@ export function Hero() {
   }
 
   return (
-    <section className="relative overflow-hidden bg-[#071533] px-4 py-20 sm:px-6 sm:py-28 lg:px-8 lg:py-32">
+    <section className="relative overflow-hidden bg-[#071533] px-4 py-10 sm:px-6 sm:py-14 lg:px-8 lg:py-16">
 
       {/* BACKGROUND */}
       <div className="absolute inset-0 -z-10 overflow-hidden">
