@@ -5,7 +5,11 @@ import {
   ArrowRight,
   Droplets,
   Factory,
-  Store,
+  Wheat,
+  Fuel,
+  ShieldCheck,
+  Mail,
+  Globe,
 } from "lucide-react"
 
 export function Footer() {
@@ -22,15 +26,14 @@ export function Footer() {
         <div className="rounded-3xl border border-white/10 bg-white/5 p-8 text-center backdrop-blur sm:p-12">
 
           <h2 className="text-3xl font-bold sm:text-4xl">
-
-            Ready to improve your business operations?
-
+            Ready to modernize your business operations?
           </h2>
 
           <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-blue-100">
 
-            Start with AquaOps and experience real-time operational
-            visibility, cloud synchronization and business performance tracking.
+            Launch AquaOps and experience operational visibility,
+            cloud synchronization, business reporting and real-time
+            financial intelligence from anywhere.
 
           </p>
 
@@ -59,7 +62,7 @@ export function Footer() {
                 }
               }}
             >
-              Explore Products
+              Explore Ecosystem
             </Button>
 
           </div>
@@ -67,49 +70,72 @@ export function Footer() {
         </div>
 
         {/* FOOTER GRID */}
-        <div className="mt-16 grid gap-10 md:grid-cols-4">
+        <div className="mt-16 grid gap-12 md:grid-cols-4">
 
-{/* BRAND */}
-<div className="md:col-span-2">
+          {/* BRAND */}
+          <div className="md:col-span-2">
 
-  <div className="flex items-center gap-5">
+            <div className="flex items-center gap-5">
 
-    <div className="rounded-2xl bg-white px-4 py-3 shadow-xl">
+              <div className="rounded-2xl bg-white px-4 py-3 shadow-xl">
 
-      <img
-        src="/logo.png"
-        alt="TrueOps Logo"
-        className="h-20 w-auto object-contain sm:h-24"
-      />
+                <img
+                  src="/logo.png"
+                  alt="TrueOps Logo"
+                  className="h-20 w-auto object-contain sm:h-24"
+                />
 
-    </div>
+              </div>
 
-    <div>
-      <h3 className="text-2xl font-bold text-white">
-        TrueOps
-      </h3>
+              <div>
 
-      <p className="text-sm text-blue-200">
-        Operations Software Ecosystem
-      </p>
-    </div>
+                <h3 className="text-2xl font-bold text-white">
+                  TrueOps
+                </h3>
 
-  </div>
+                <p className="text-sm text-blue-200">
+                  Operational Software Ecosystem
+                </p>
 
-  <p className="mt-6 max-w-md leading-relaxed text-blue-100">
+              </div>
 
-    TrueOps builds industry-focused operational software
-    products that help businesses manage production,
-    sales, expenses, reporting and operational performance.
+            </div>
 
-  </p>
+            <p className="mt-6 max-w-md leading-relaxed text-blue-100">
 
-</div>
+              TrueOps develops industry-focused operational software
+              platforms that help businesses improve operational visibility,
+              production tracking, financial intelligence and reporting.
+
+            </p>
+
+            {/* TRUST ITEMS */}
+            <div className="mt-6 space-y-3 text-sm text-blue-100">
+
+              <div className="flex items-center gap-2">
+                <ShieldCheck className="h-4 w-4 text-green-300" />
+                Secure cloud-powered infrastructure
+              </div>
+
+              <div className="flex items-center gap-2">
+                <Globe className="h-4 w-4 text-blue-300" />
+                Multi-device operational access
+              </div>
+
+              <div className="flex items-center gap-2">
+                <Mail className="h-4 w-4 text-blue-300" />
+                support@trueops.app
+              </div>
+
+            </div>
+
+          </div>
+
           {/* PRODUCTS */}
           <div>
 
             <h4 className="text-sm font-semibold uppercase tracking-wider text-blue-300">
-              Products
+              Ecosystem Products
             </h4>
 
             <div className="mt-5 space-y-4">
@@ -123,8 +149,13 @@ export function Footer() {
               </button>
 
               <div className="flex items-center gap-2 text-blue-200/60">
-                <Store className="h-4 w-4" />
-                RetailOps
+                <Wheat className="h-4 w-4" />
+                FarmOps
+              </div>
+
+              <div className="flex items-center gap-2 text-blue-200/60">
+                <Fuel className="h-4 w-4" />
+                FuelOps
               </div>
 
               <div className="flex items-center gap-2 text-blue-200/60">
@@ -136,34 +167,51 @@ export function Footer() {
 
           </div>
 
-          {/* PLATFORM */}
-          <div>
+          {/* LEGAL + PLATFORM */}
+<div className="mt-5 space-y-3 text-blue-100">
 
-            <h4 className="text-sm font-semibold uppercase tracking-wider text-blue-300">
-              Platform
-            </h4>
+  <a href="/privacy" className="block transition hover:text-white">
+    Privacy Policy
+  </a>
 
-            <div className="mt-5 space-y-3 text-blue-100">
+  <a href="/terms" className="block transition hover:text-white">
+    Terms of Service
+  </a>
 
-              <p>Cloud Synchronization</p>
-              <p>Operational Reporting</p>
-              <p>Multi-Device Access</p>
-              <p>Universal Currency Support</p>
+  <a href="/security" className="block transition hover:text-white">
+    Data & Security
+  </a>
 
-            </div>
+  <a href="/disclaimer" className="block transition hover:text-white">
+    Platform Disclaimer
+  </a>
 
-          </div>
+  <a
+    href="mailto:support@trueops.app"
+    className="block transition hover:text-white"
+  >
+    Contact Support
+  </a>
+
+</div>
 
         </div>
 
         {/* BOTTOM */}
-        <div className="mt-16 border-t border-white/10 pt-6 text-center text-sm text-blue-200">
+        <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-6 text-sm text-blue-200 md:flex-row">
 
-          © {new Date().getFullYear()} TrueOps. All rights reserved.
+          <p>
+            © {new Date().getFullYear()} TrueOps. All rights reserved.
+          </p>
+
+          <p className="text-center md:text-right">
+            Operational Software Infrastructure For Real Industries
+          </p>
 
         </div>
 
       </div>
+
     </footer>
   )
 }
