@@ -4,6 +4,7 @@ import { Problem } from "@/components/landing/problem"
 import { Solution } from "@/components/landing/solution"
 import { UseCases } from "@/components/landing/use-cases"
 import { Footer } from "@/components/landing/footer"
+import { LiveProducts } from "@/components/landing/live-products"
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Hero />
       <Problem />
       <Solution />
+      <LiveProducts />
       <UseCases />
       <Footer />
     </main>

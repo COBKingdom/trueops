@@ -4,16 +4,17 @@ import { Card, CardContent } from "@/components/ui/card"
 import {
   ArrowRight,
   Droplets,
-  Store,
   Factory,
   Sparkles,
+  Egg,
 } from "lucide-react"
-
 export function UseCases() {
   const goToAqua = () => {
     window.location.href = "https://aqua.trueops.app/aquaops"
   }
-
+  const goToPoultry = () => {
+  window.location.href = "https://poultry.trueops.app"
+  }
   return (
     <section
       id="products"
@@ -218,43 +219,153 @@ export function UseCases() {
   </CardContent>
 </Card>
 
-          {/* RETAILOPS */}
-          <Card className="rounded-3xl border-0 bg-white shadow-md">
+{/* POULTRYOPS */}
+<Card
+  onClick={goToPoultry}
+  className="group relative cursor-pointer overflow-hidden rounded-3xl border-0 bg-[#071533] text-white shadow-2xl transition duration-300 hover:-translate-y-1 hover:shadow-[0_20px_60px_rgba(37,99,235,0.25)]"
+>
 
-            <CardContent className="p-7">
+  <div className="absolute right-0 top-0 h-40 w-40 rounded-full bg-blue-500/20 blur-3xl" />
 
-              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-orange-100">
+  <CardContent className="relative p-7">
 
-                <Store className="h-7 w-7 text-orange-500" />
+    {/* TOP */}
+    <div className="flex items-start justify-between">
 
-              </div>
+      <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-500/20">
+        <Egg className="h-7 w-7 text-blue-300" />
+      </div>
 
-              <div className="mt-6">
+      <div className="flex items-center gap-2 rounded-full bg-green-500/10 px-3 py-1">
 
-                <div className="flex items-center justify-between">
+        <div className="h-2 w-2 rounded-full bg-green-400 animate-pulse" />
 
-                  <h3 className="text-2xl font-bold text-[#071533]">
-                    RetailOps
-                  </h3>
+        <span className="text-[11px] font-semibold text-green-300">
+          LIVE OPERATIONS
+        </span>
 
-                  <span className="rounded-full bg-gray-100 px-3 py-1 text-xs font-medium text-gray-500">
-                    Coming Soon
-                  </span>
+      </div>
 
-                </div>
+    </div>
 
-                <p className="mt-3 text-sm leading-relaxed text-gray-600">
+    {/* TITLE */}
+    <div className="mt-6">
 
-                  Retail operations platform for inventory,
-                  sales tracking, customer management and
-                  retail business analytics.
+      <h3 className="text-3xl font-bold tracking-tight">
+        PoultryOps
+      </h3>
 
-                </p>
+      <p className="mt-3 text-sm leading-relaxed text-blue-100">
 
-              </div>
+        Operational intelligence platform for modern poultry farms —
+        helping farmers manage flocks, egg production, feed usage,
+        health records, mortality, sales, expenses and profitability.
 
-            </CardContent>
-          </Card>
+      </p>
+
+    </div>
+
+    {/* SCREENSHOT AREA */}
+    <div className="relative mt-8">
+
+      <div className="absolute inset-0 rounded-[28px] bg-blue-500/10 blur-2xl" />
+
+      <div className="relative overflow-hidden rounded-[28px] border border-white/10 bg-[#091a3d] shadow-2xl">
+
+        <img
+          src="/poultryops-dashboard.png"
+          alt="PoultryOps Dashboard"
+          className="w-full object-cover"
+        />
+
+        <div className="absolute left-4 top-4 rounded-full bg-green-500 px-3 py-1 text-[11px] font-semibold text-white shadow-lg">
+
+          ● LIVE FARM DATA
+
+        </div>
+
+      </div>
+
+      {/* FLOATING FEATURE IMAGE */}
+      <div className="absolute -bottom-6 -left-2 hidden w-28 overflow-hidden rounded-2xl border border-white/10 bg-[#0d1b3e] shadow-2xl sm:block">
+
+        <img
+          src="/poultry-menu-mobile.png"
+          alt="PoultryOps Features"
+          className="w-full object-cover"
+        />
+
+      </div>
+
+    </div>
+
+    {/* METRICS */}
+    <div className="mt-14 grid grid-cols-2 gap-3">
+
+      <div className="rounded-2xl bg-white/5 p-4 backdrop-blur">
+        <p className="text-xs text-blue-200">
+          Active Birds
+        </p>
+
+        <p className="mt-1 text-xl font-bold">
+          1.1K
+        </p>
+      </div>
+
+      <div className="rounded-2xl bg-white/5 p-4 backdrop-blur">
+        <p className="text-xs text-blue-200">
+          Eggs Today
+        </p>
+
+        <p className="mt-1 text-xl font-bold">
+          3.9K
+        </p>
+      </div>
+
+      <div className="rounded-2xl bg-white/5 p-4 backdrop-blur">
+        <p className="text-xs text-blue-200">
+          Revenue
+        </p>
+
+        <p className="mt-1 text-xl font-bold text-green-300">
+          $606K
+        </p>
+      </div>
+
+      <div className="rounded-2xl bg-white/5 p-4 backdrop-blur">
+        <p className="text-xs text-blue-200">
+          Profit
+        </p>
+
+        <p className="mt-1 text-xl font-bold text-green-300">
+          $560K
+        </p>
+      </div>
+
+    </div>
+
+    {/* FEATURES */}
+    <div className="mt-7 space-y-2 text-sm text-blue-100">
+
+      <p>• Flock management</p>
+      <p>• Egg production tracking</p>
+      <p>• Feed & inventory management</p>
+      <p>• Health & mortality monitoring</p>
+      <p>• Sales, expenses & reporting</p>
+
+    </div>
+
+    {/* CTA */}
+    <div className="mt-8 flex items-center gap-2 font-semibold text-blue-300 transition group-hover:translate-x-1">
+
+      Launch PoultryOps
+      <ArrowRight className="h-4 w-4" />
+
+    </div>
+
+  </CardContent>
+
+</Card>
 
           {/* FACTORYOPS */}
           <Card className="rounded-3xl border-0 bg-white shadow-md">
