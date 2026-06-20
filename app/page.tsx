@@ -5,6 +5,7 @@ import { Solution } from "@/components/landing/solution"
 import { UseCases } from "@/components/landing/use-cases"
 import { Footer } from "@/components/landing/footer"
 import { LiveProducts } from "@/components/landing/live-products"
+import { TrustSection } from "@/components/landing/trust-section"
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Problem />
       <Solution />
       <LiveProducts />
+      <TrustSection />
       <UseCases />
       <Footer />
     </main>

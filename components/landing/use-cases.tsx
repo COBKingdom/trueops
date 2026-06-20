@@ -367,43 +367,87 @@ export function UseCases() {
 
 </Card>
 
-          {/* FACTORYOPS */}
-          <Card className="rounded-3xl border-0 bg-white shadow-md">
+{/* TRUEOPS ROADMAP */}
+<Card className="rounded-3xl border-0 bg-white shadow-md">
 
-            <CardContent className="p-7">
+  <CardContent className="p-7">
 
-              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-green-100">
+    <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-orange-100">
 
-                <Factory className="h-7 w-7 text-green-600" />
+      <Factory className="h-7 w-7 text-orange-600" />
 
-              </div>
+    </div>
 
-              <div className="mt-6">
+    <div className="mt-6">
 
-                <div className="flex items-center justify-between">
+      <div className="flex items-center justify-between">
 
-                  <h3 className="text-2xl font-bold text-[#071533]">
-                    FactoryOps
-                  </h3>
+        <h3 className="text-2xl font-bold text-[#071533]">
+          TrueOps Roadmap
+        </h3>
 
-                  <span className="rounded-full bg-gray-100 px-3 py-1 text-xs font-medium text-gray-500">
-                    Coming Soon
-                  </span>
+        <span className="rounded-full bg-blue-100 px-3 py-1 text-xs font-medium text-[#2563eb]">
+          Next
+        </span>
 
-                </div>
+      </div>
 
-                <p className="mt-3 text-sm leading-relaxed text-gray-600">
+      <p className="mt-3 text-sm leading-relaxed text-gray-600">
 
-                  Manufacturing operations management for
-                  production facilities, industrial tracking,
-                  workflow monitoring and operational reporting.
+        New operational intelligence platforms currently planned for the
+        growing TrueOps ecosystem.
 
-                </p>
+      </p>
 
-              </div>
+      <div className="mt-6 space-y-3">
 
-            </CardContent>
-          </Card>
+        <div className="flex items-center justify-between rounded-xl bg-[#f5f7fb] px-3 py-3">
+          <span className="font-medium text-[#071533]">
+            🌾 BakeryOps
+          </span>
+
+          <span className="text-xs text-gray-500">
+            Planned
+          </span>
+        </div>
+
+        <div className="flex items-center justify-between rounded-xl bg-[#f5f7fb] px-3 py-3">
+          <span className="font-medium text-[#071533]">
+            ⛽ FlowOps
+          </span>
+
+          <span className="text-xs text-gray-500">
+            Planned
+          </span>
+        </div>
+
+        <div className="flex items-center justify-between rounded-xl bg-[#f5f7fb] px-3 py-3">
+          <span className="font-medium text-[#071533]">
+            🏭 FactoryOps
+          </span>
+
+          <span className="text-xs text-gray-500">
+            Planned
+          </span>
+        </div>
+
+        <div className="flex items-center justify-between rounded-xl bg-[#f5f7fb] px-3 py-3">
+          <span className="font-medium text-[#071533]">
+            🚜 FarmOps
+          </span>
+
+          <span className="text-xs text-gray-500">
+            Planned
+          </span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </CardContent>
+
+</Card>
 
         </div>
 

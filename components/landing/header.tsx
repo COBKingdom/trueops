@@ -11,6 +11,10 @@ export function Header() {
     window.location.href = "https://aqua.trueops.app/aquaops"
   }
 
+  const goToPoultry = () => {
+    window.location.href = "https://poultry.trueops.app"
+  }
+
   return (
     <header className="sticky top-0 z-50 w-full border-b border-gray-200/70 bg-white/90 backdrop-blur-xl supports-[backdrop-filter]:bg-white/80">
 
@@ -32,16 +36,21 @@ export function Header() {
             </h1>
 
             <div className="flex items-center gap-2">
+
               <p className="text-[11px] text-gray-500 sm:text-xs">
                 Operational Platform
               </p>
 
               <div className="hidden sm:flex items-center gap-1 rounded-full bg-green-50 px-2 py-[2px]">
+
                 <div className="h-2 w-2 rounded-full bg-green-500 animate-pulse" />
+
                 <span className="text-[10px] font-medium text-green-700">
-                  LIVE
+                  2 LIVE PRODUCTS
                 </span>
+
               </div>
+
             </div>
 
           </div>
@@ -75,13 +84,29 @@ export function Header() {
         </nav>
 
         {/* DESKTOP CTA */}
-        <div className="hidden md:flex items-center">
+        <div className="hidden items-center gap-3 md:flex">
+
+          <Button
+            variant="outline"
+            className="h-11 rounded-xl border-[#2563eb] text-[#2563eb] hover:bg-blue-50"
+            onClick={goToAqua}
+          >
+            AquaOps
+          </Button>
+
+          <Button
+            variant="outline"
+            className="h-11 rounded-xl border-green-600 text-green-700 hover:bg-green-50"
+            onClick={goToPoultry}
+          >
+            PoultryOps
+          </Button>
 
           <Button
             className="h-11 rounded-xl bg-[#2563eb] px-5 text-sm font-semibold shadow-sm transition hover:bg-blue-700"
             onClick={goToAqua}
           >
-            Launch AquaOps
+            Start Free
           </Button>
 
         </div>
@@ -119,13 +144,12 @@ export function Header() {
 
           <nav className="flex flex-col gap-5 px-5 py-6">
 
-            {/* STATUS */}
             <div className="flex items-center gap-2 rounded-xl bg-green-50 px-3 py-2">
 
               <div className="h-2 w-2 rounded-full bg-green-500 animate-pulse" />
 
               <p className="text-xs font-medium text-green-700">
-                LIVE Operational Platform
+                AquaOps & PoultryOps Live
               </p>
 
             </div>
@@ -162,6 +186,16 @@ export function Header() {
               }}
             >
               Launch AquaOps
+            </Button>
+
+            <Button
+              className="h-11 rounded-xl bg-green-600 text-sm font-semibold hover:bg-green-700"
+              onClick={() => {
+                setMobileMenuOpen(false)
+                goToPoultry()
+              }}
+            >
+              Launch PoultryOps
             </Button>
 
           </nav>

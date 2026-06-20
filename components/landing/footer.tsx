@@ -5,8 +5,6 @@ import {
   ArrowRight,
   Droplets,
   Factory,
-  Wheat,
-  Fuel,
   ShieldCheck,
   Mail,
   Globe,
@@ -15,6 +13,10 @@ import {
 export function Footer() {
   const goToAqua = () => {
     window.location.href = "https://aqua.trueops.app/aquaops"
+  }
+
+  const goToPoultry = () => {
+    window.location.href = "https://poultry.trueops.app"
   }
 
   return (
@@ -31,9 +33,9 @@ export function Footer() {
 
           <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-blue-100">
 
-            Launch AquaOps and experience operational visibility,
+            Launch AquaOps or PoultryOps and experience operational visibility,
             cloud synchronization, business reporting and real-time
-            financial intelligence from anywhere.
+            operational intelligence from anywhere.
 
           </p>
 
@@ -51,18 +53,10 @@ export function Footer() {
             <Button
               size="lg"
               variant="outline"
-              className="border-blue-300 bg-transparent text-white hover:bg-white hover:text-[#071533]"
-              onClick={() => {
-                const section = document.getElementById("products")
-
-                if (section) {
-                  section.scrollIntoView({
-                    behavior: "smooth",
-                  })
-                }
-              }}
+              className="border-green-400 bg-transparent text-white hover:bg-white hover:text-[#071533]"
+              onClick={goToPoultry}
             >
-              Explore Ecosystem
+              Launch PoultryOps
             </Button>
 
           </div>
@@ -135,7 +129,7 @@ export function Footer() {
           <div>
 
             <h4 className="text-sm font-semibold uppercase tracking-wider text-blue-300">
-              Ecosystem Products
+              Products
             </h4>
 
             <div className="mt-5 space-y-4">
@@ -146,16 +140,31 @@ export function Footer() {
               >
                 <Droplets className="h-4 w-4" />
                 AquaOps
+
+                <span className="rounded-full bg-green-500/20 px-2 py-0.5 text-[10px] text-green-300">
+                  LIVE
+                </span>
+
+              </button>
+
+              <button
+                onClick={goToPoultry}
+                className="flex items-center gap-2 text-blue-100 transition hover:text-white"
+              >
+                🐔 PoultryOps
+
+                <span className="rounded-full bg-green-500/20 px-2 py-0.5 text-[10px] text-green-300">
+                  LIVE
+                </span>
+
               </button>
 
               <div className="flex items-center gap-2 text-blue-200/60">
-                <Wheat className="h-4 w-4" />
-                FarmOps
+                🌾 FarmOps
               </div>
 
               <div className="flex items-center gap-2 text-blue-200/60">
-                <Fuel className="h-4 w-4" />
-                FuelOps
+                ⛽ FlowOps
               </div>
 
               <div className="flex items-center gap-2 text-blue-200/60">
@@ -167,33 +176,53 @@ export function Footer() {
 
           </div>
 
-          {/* LEGAL + PLATFORM */}
-<div className="mt-5 space-y-3 text-blue-100">
+          {/* LEGAL */}
+          <div>
 
-  <a href="/privacy" className="block transition hover:text-white">
-    Privacy Policy
-  </a>
+            <h4 className="text-sm font-semibold uppercase tracking-wider text-blue-300">
+              Company
+            </h4>
 
-  <a href="/terms" className="block transition hover:text-white">
-    Terms of Service
-  </a>
+            <div className="mt-5 space-y-3 text-blue-100">
 
-  <a href="/security" className="block transition hover:text-white">
-    Data & Security
-  </a>
+              <a
+                href="/privacy"
+                className="block transition hover:text-white"
+              >
+                Privacy Policy
+              </a>
 
-  <a href="/disclaimer" className="block transition hover:text-white">
-    Platform Disclaimer
-  </a>
+              <a
+                href="/terms"
+                className="block transition hover:text-white"
+              >
+                Terms of Service
+              </a>
 
-  <a
-    href="mailto:support@trueops.app"
-    className="block transition hover:text-white"
-  >
-    Contact Support
-  </a>
+              <a
+                href="/security"
+                className="block transition hover:text-white"
+              >
+                Data & Security
+              </a>
 
-</div>
+              <a
+                href="/disclaimer"
+                className="block transition hover:text-white"
+              >
+                Platform Disclaimer
+              </a>
+
+              <a
+                href="mailto:support@trueops.app"
+                className="block transition hover:text-white"
+              >
+                Contact Support
+              </a>
+
+            </div>
+
+          </div>
 
         </div>
 
