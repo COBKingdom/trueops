@@ -34,4 +34,8 @@ export default function TermsPage() {
 
       <p>
         Certain features or products may require subscriptions or premium access.
+      </p>
+
+    </LegalLayout>
+  )
 }
